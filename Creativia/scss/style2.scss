@@ -1,0 +1,93 @@
+@import "veriables";
+@import "mixins";
+
+@font-face {
+    font-family: "RalewayRegular";
+    src: url("../fonts/Raleway/Raleway-Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Raleway-Bold";
+    src: url("../fonts/Raleway/Raleway-Bold.ttf");
+    font-style: bold;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "LatoRegular";
+    src: url("../fonts/lato.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+html, * {
+    font-family: "RalewayRegular";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    box-sizing: border-box;
+
+    /*Свойства width и height включают в себя значения полей и грани*/
+}
+
+body {
+    font-family: "RalewayRegular";
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+
+    /*inherit - наследует от родителя*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: ' ';
+}
+
+.container {
+    position: relative;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    height: 700px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 0;
+    grid-auto-flow: row;
+}
+
+
+
+.container.box-img {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    filter: brightness(0.5) grayscale(1);
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        filter: brightness(1) grayscale(0);
+    }
+}

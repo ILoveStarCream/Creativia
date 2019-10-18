@@ -1,0 +1,82 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "RalewayRegular";
+  src: url("../fonts/Raleway/Raleway-Regular.ttf");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("../fonts/Raleway/Raleway-Bold.ttf");
+  font-style: bold;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "LatoRegular";
+  src: url("../fonts/lato.ttf");
+  font-style: normal;
+  font-weight: normal; }
+
+html, * {
+  font-family: "RalewayRegular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /*Свойства width и height включают в себя значения полей и грани*/ }
+
+body {
+  font-family: "RalewayRegular";
+  margin: 0;
+  padding: 0; }
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  /*inherit - наследует от родителя*/ }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: ' '; }
+
+.container {
+  position: relative;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  height: 700px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 0;
+  grid-auto-flow: row; }
+
+.container.box-img {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-filter: brightness(0.5) grayscale(1);
+  filter: brightness(0.5) grayscale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+  .container.box-img:hover {
+    -webkit-filter: brightness(1) grayscale(0);
+    filter: brightness(1) grayscale(0); }

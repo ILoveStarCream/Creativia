@@ -1,0 +1,16 @@
+@mixin HeaderStyle {
+    font-size: 30px;
+    color: #ffffff;
+    text-decoration: underline;
+    font-family:Raleway-Bold;
+    text-align:center;
+    margin:0 auto;
+    
+}
+@mixin clearfix() {
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
